@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "daisyui"{
+  themes: light --default;
+}
+
+
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    
+    .typing-effect {
+      overflow: hidden;
+      border-right: 0.15em solid #646cff;
+      white-space: nowrap;
+      margin: 0 auto;
+      animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #646cff }
+    }
+    
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .skill-badge {
+      transition: all 0.3s ease;
+    }
+    
+    .skill-badge:hover {
+      transform: scale(1.1);
+    }
+    
+    .scroll-animations .animate {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 1s ease;
+    }
+    
+    .scroll-animations .animate.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
